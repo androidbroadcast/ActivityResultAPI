@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ActivityResult API</string>
+    <string name="pick_image">Pick Image</string>
+    <string name="send">send</string>
+    <string name="empty_message">No message</string>
+    <string name="get_message">Get message</string>
+    <string name="edit_message_hint">Type message</string>
 </resources>
