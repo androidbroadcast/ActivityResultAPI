@@ -20,6 +20,6 @@ class GetMessageContract : ActivityResultContract<CharSequence?, CharSequence?>(
     }
 
     override fun getSynchronousResult(context: Context, input: CharSequence?): SynchronousResult<CharSequence?>? {
-        return super.getSynchronousResult(context, input)
+        return null
     }
 }
