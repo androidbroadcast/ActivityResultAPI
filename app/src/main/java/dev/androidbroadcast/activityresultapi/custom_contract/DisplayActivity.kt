@@ -10,7 +10,7 @@ class DisplayActivity : AppCompatActivity(R.layout.activity_display) {
 
     private val viewBinding by viewBinding(ActivityDisplayBinding::bind)
 
-    private val getMessage = registerForActivityResult(GetMessageContract()) {
+    private val getMessage = registerForActivityResult(EditMessageContract()) {
         viewBinding.message.text = it
     }
 

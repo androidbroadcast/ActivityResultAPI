@@ -5,7 +5,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.activity.result.contract.ActivityResultContract
 
-class GetMessageContract : ActivityResultContract<CharSequence?, CharSequence?>() {
+class EditMessageContract : ActivityResultContract<CharSequence?, CharSequence?>() {
 
     override fun createIntent(context: Context, input: CharSequence?): Intent {
         return Intent(context, MessageGeneratorActivity::class.java)
