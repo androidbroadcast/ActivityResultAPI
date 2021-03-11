@@ -8,7 +8,7 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="@dimen/default_activity_margin"
-    tools:context=".permissions.PermissionsActivity"
+    tools:context="._05_permissions.PermissionsActivity"
     >
 
     <TextView

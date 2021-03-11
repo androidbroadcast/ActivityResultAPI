@@ -1,4 +1,4 @@
-package dev.androidbroadcast.activityresultapi.custom_contract
+package dev.androidbroadcast.activityresultapi._04_custom_contract
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

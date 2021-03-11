@@ -16,10 +16,10 @@
         android:theme="@style/Theme.ActivityResultAPI"
         >
 
-        <activity android:name=".custom_contract.MessageGeneratorActivity" />
+        <activity android:name="._04_custom_contract.MessageGeneratorActivity" />
 
         <activity
-            android:name=".custom_contract.DisplayActivity"
+            android:name="._04_custom_contract.DisplayActivity"
             android:exported="true"
             >
             <intent-filter>
@@ -30,7 +30,7 @@
         </activity>
 
         <activity
-            android:name=".imagepicker.ImagePickerActivity"
+            android:name=".migration.ImagePickerActivity"
             android:exported="true"
             >
             <intent-filter>
@@ -41,7 +41,7 @@
         </activity>
 
         <activity
-            android:name=".permissions.PermissionsActivity"
+            android:name="._05_permissions.PermissionsActivity"
             android:exported="true"
             >
             <intent-filter>

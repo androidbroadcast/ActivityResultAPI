@@ -1,4 +1,4 @@
-package dev.androidbroadcast.activityresultapi.custom_contract
+package dev.androidbroadcast.activityresultapi._04_custom_contract
 
 import android.app.Activity
 import android.content.Context

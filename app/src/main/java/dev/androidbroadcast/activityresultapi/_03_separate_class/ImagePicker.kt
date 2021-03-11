@@ -1,4 +1,4 @@
-package dev.androidbroadcast.activityresultapi.separate_class
+package dev.androidbroadcast.activityresultapi._03_separate_class
 
 import android.net.Uri
 import android.util.Log
@@ -7,7 +7,7 @@ import androidx.activity.result.ActivityResultRegistry
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
-import dev.androidbroadcast.activityresultapi.imagepicker.MIMETYPE_IMAGES
+import dev.androidbroadcast.activityresultapi._01_activity.MIMETYPE_IMAGES
 
 class ImagePicker(
     registry: ActivityResultRegistry,

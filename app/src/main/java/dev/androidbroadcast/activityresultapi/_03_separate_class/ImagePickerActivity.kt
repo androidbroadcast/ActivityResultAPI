@@ -1,8 +1,7 @@
-package dev.androidbroadcast.activityresultapi.imagepicker
+package dev.androidbroadcast.activityresultapi._03_separate_class
 
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import by.kirich1409.viewbindingdelegate.viewBinding
 import coil.clear
@@ -13,11 +12,10 @@ import dev.androidbroadcast.activityresultapi.databinding.ImagePickerBinding
 class ImagePickerActivity : AppCompatActivity(R.layout.image_picker) {
 
     private val viewBinding by viewBinding(ImagePickerBinding::bind)
-
-    private val pickImage = registerForActivityResult(ActivityResultContracts.GetContent()) { contentUri ->
+    private val imagePicker = ImagePicker(activityResultRegistry, this) { imageUri ->
         with(viewBinding.image) {
             clear()
-            load(contentUri) {
+            load(imageUri) {
                 listener(
                     onError = { request, throwable ->
                         Toast.makeText(request.context, throwable.message, Toast.LENGTH_SHORT).show()
@@ -30,7 +28,7 @@ class ImagePickerActivity : AppCompatActivity(R.layout.image_picker) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewBinding.pickImage.setOnClickListener {
-            pickImage.launch(MIMETYPE_IMAGES)
+            imagePicker.selectImage()
         }
     }
 }

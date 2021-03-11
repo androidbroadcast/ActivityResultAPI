@@ -1,18 +1,18 @@
-package dev.androidbroadcast.activityresultapi.fragment
+package dev.androidbroadcast.activityresultapi._01_activity
 
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import by.kirich1409.viewbindingdelegate.viewBinding
 import coil.clear
 import coil.load
 import dev.androidbroadcast.activityresultapi.R
 import dev.androidbroadcast.activityresultapi.databinding.ImagePickerBinding
-import dev.androidbroadcast.activityresultapi.imagepicker.MIMETYPE_IMAGES
 
-class ImagePickerFragment : Fragment(R.layout.image_picker) {
+class ImagePickerActivity : AppCompatActivity(R.layout.image_picker) {
+
+    private val viewBinding by viewBinding(ImagePickerBinding::bind)
 
     private val pickImage = registerForActivityResult(ActivityResultContracts.GetContent()) { contentUri ->
         with(viewBinding.image) {
@@ -27,13 +27,10 @@ class ImagePickerFragment : Fragment(R.layout.image_picker) {
         }
     }
 
-    private val viewBinding by viewBinding(ImagePickerBinding::bind)
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         viewBinding.pickImage.setOnClickListener {
             pickImage.launch(MIMETYPE_IMAGES)
         }
     }
 }
-

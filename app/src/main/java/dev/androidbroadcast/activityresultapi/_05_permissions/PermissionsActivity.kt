@@ -1,4 +1,4 @@
-package dev.androidbroadcast.activityresultapi.permissions
+package dev.androidbroadcast.activityresultapi._05_permissions
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import by.kirich1409.viewbindingdelegate.viewBinding
 import dev.androidbroadcast.activityresultapi.R
 import dev.androidbroadcast.activityresultapi.databinding.ActivityPermissionsBinding
